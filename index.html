@@ -7,6 +7,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/app.css">
+    <!-- Lottie Script -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>Satya Foods</title>
 </head>
 <body>
@@ -35,7 +37,8 @@
     </header>
     <!-- Main -->
     <main class="main-content">
-        <section class="hero section hidden">
+        <!-- Hero Section -->
+        <section class="hero section">
             <div class="hero-text">
                 <p>it's not just <strong>Food</strong>, it's <strong id="typed">...</strong></p>
                 <h2>Satya F<span>oo</span>ds<br>- Speaks <span>with</span> Taste</h2>
@@ -51,12 +54,14 @@
                 <img src="./images/hero-4.png" alt="chicken" class="hero-img ">
             </div>
         </section>
+        <!-- Best Items -->
         <section class="best-items section">
             <h2 class="section-heading">Most Loved</h2>
             <div class="items-container">
                 <div class="item">
                     <div class="image-grp">
-                        <img src="./images/item-eggchilli.png" alt="">
+                        <img src="./images/item-eggchilli.png" alt="" class="item-img">
+                        <!-- <img src="./images/svg/cart.svg" alt="buy item" class="icons buy-cart"> -->
                     </div>
                     <div class="item-info-group">
                         <h4 class="item-title">Egg Chilli</h4>
@@ -64,8 +69,166 @@
                         <p class="item-price">₹ 120.00<span class="item-marked-price">₹ 150.00</span></p>
                     </div>
                 </div>
+                <div class="item">
+                    <div class="image-grp">
+                        <img src="./images/item-manchurian.png" alt="" class="item-img">
+                    </div>
+                    <div class="item-info-group">
+                        <h4 class="item-title">Chicken Manchurian</h4>
+                        <p class="item-price">₹ 120.00<span class="item-marked-price">₹ 150.00</span></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image-grp">
+                        <img src="./images/item-murugMusallam.png" alt="" class="item-img">
+                    </div>
+                    <div class="item-info-group">
+                        <h4 class="item-title">Murug Musallam</h4>
+                        <p class="item-addon">with <strong>Free Deserts</strong></p>
+                        <p class="item-price">₹ 370.00<span class="item-marked-price">₹ 450.00</span></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image-grp">
+                        <img src="./images/item-noodles.png" alt="" class="item-img">
+                    </div>
+                    <div class="item-info-group">
+                        <h4 class="item-title">Chineese Noodels</h4>
+                        <p class="item-addon">with <strong>Extra Chilli</strong></p>
+                        <p class="item-price">₹ 85.00<span class="item-marked-price">₹ 110.00</span></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image-grp">
+                        <img src="./images/item-soup.png" alt="" class="item-img">
+                    </div>
+                    <div class="item-info-group">
+                        <h4 class="item-title">Chicked Suop</h4>
+                        <p class="item-price">₹ 98.00<span class="item-marked-price">₹ 120.00</span></p>
+                    </div>
+                </div>
             </div>
         </section>
+        <!-- Menu -->
+        <section class="menu section">
+            <h2 class="section-heading">Menu</h2>
+            <div class="menu-container">
+                <!-- <div class="menu-item">
+                    <p>Items</p>
+                    <p>Price</p>
+                </div> -->
+                <table>
+                    <tr class="menu-item">
+                        <th>Items</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Veg Noodles 
+                        </td>
+                        <td>₹ 40.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Egg Noodles</td>
+                        <td>₹ 50.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Chicken Noodles</td>
+                        <td>₹ 80.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Veg Fried Rice</td>
+                        <td>₹ 60.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Egg Fried Rice</td>
+                        <td>₹ 70.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Chicken Fried Rice
+                            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_sf1bpcsj.json"  background="transparent"  speed="1"  style="width: 40px; height: 40px;"  loop  autoplay></lottie-player>
+                        </td>
+                        <td>₹ 90.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Chilli Egg</td>
+                        <td>₹ 70.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Veg Manchurian</td>
+                        <td>₹ 65.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Chicken Manchurian
+                            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_sf1bpcsj.json"  background="transparent"  speed="1"  style="width: 40px; height: 40px;"  loop  autoplay></lottie-player>
+                        </td>
+                        <td>₹ 95.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Chicken Lolipops</td>
+                        <td>₹ 95.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Chicken Soup
+                            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_sf1bpcsj.json"  background="transparent"  speed="1"  style="width: 40px; height: 40px;"  loop  autoplay></lottie-player>
+                        </td>
+                        <td>₹ 40.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td >Chicken Joint</td>
+                        <td>₹ 40.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Crispy Chicken Lolipop</td>
+                        <td>₹ 100.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td class="hot">Crispy Chicken Wings</td>
+                        <td>₹ 100.00 /-</td>
+                    </tr>
+                    <tr class="menu-item">
+                        <td>Crispy Chicken Legs</td>
+                        <td>₹ 100.00 /-</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- Maps -->
+        <section class="maps section">
+            <h2 class="section-heading">Find Us</h2>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.9813872532754!2d87.3140495452742!3d22.34375812935907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d446949fb2445%3A0x8b199e2222aa740f!2sGolebazar!5e0!3m2!1sen!2sin!4v1664389947645!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map-text">
+                <h2>Find Us Here, We Would ❤️ to Serve You</h2>
+                <p>Satya Foods, Gole Bazar, Kharagpur, West Bengal - 721301</p>
+                <button class="btn outline">Find Us</button>
+            </div>
+        </section>
+        <!-- Contact Us -->
+        <section class="contact us section">
+            <h2 class="section-heading">Contact Us</h2>
+            <form action="#" class="form">
+                <div class="rendered-form">
+                    <div class="">
+                        <input type="text" placeholder="Name" class="form-control" access="false" id="control-9047303" name="undefined">
+                    </div>
+                    <div class="form-group field-text-1664392068852">
+                        <input type="text" placeholder="Email" class="form-control" name="text-1664392068852" access="false" id="text-1664392068852">
+                    </div>
+                    <div class="form-group field-textarea-1664392089460">
+                        <textarea type="textarea" placeholder="Your Message" class="form-control" name="textarea-1664392089460" access="false" rows="5" id="textarea-1664392089460"></textarea>
+                    </div>
+                    <button class="btn outline">SUBMIT</button>
+                </div>
+            </form>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div class="footer">
+            <p>&copy; Copyright 2022 <span><a href="#">Satya Foods</a></span> 🍔</p>
+
+            </div>
+        </footer>
     </main>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

@@ -29,7 +29,7 @@ body {
             background: red;
             position: absolute;
             top: 0;
-            left: 60px;
+            left: 41%;
         }
         &::after {
             content: '';
@@ -39,7 +39,7 @@ body {
             background: red;
             position: absolute;
             bottom: 0;
-            right: 60px;
+            right: 41%;
         }
     }
 }

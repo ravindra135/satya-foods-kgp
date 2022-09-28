@@ -30,7 +30,7 @@ body {
       background: red;
       position: absolute;
       top: 0;
-      left: 60px; }
+      left: 41%; }
     .section .section-heading::after {
       content: '';
       display: block;
@@ -39,7 +39,7 @@ body {
       background: red;
       position: absolute;
       bottom: 0;
-      right: 60px; }
+      right: 41%; }
 
 .btn {
   padding: 15px 25px;
@@ -159,6 +159,9 @@ nav.nav.active {
     .hero-text .hero-btn-group .outline {
       border-color: red;
       color: red; }
+      .hero-text .hero-btn-group .outline:hover {
+        background: red;
+        color: white; }
 
 .hero-images {
   width: 100%;
@@ -174,8 +177,9 @@ nav.nav.active {
 
 .best-items .items-container {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  gap: 15px; }
+  gap: 2.7rem; }
   .best-items .items-container .item {
     background: blue;
     padding: 8px;
@@ -184,11 +188,17 @@ nav.nav.active {
     min-height: 240px;
     background-image: linear-gradient(to bottom right, grey, white);
     position: relative; }
-    .best-items .items-container .item img {
-      width: 280px;
+    .best-items .items-container .item img.item-img {
+      width: 240px;
       position: absolute;
       top: -40px;
-      right: -20px; }
+      right: 0; }
+    .best-items .items-container .item img.buy-cart {
+      width: 35px;
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      fill: red; }
     .best-items .items-container .item .item-info-group {
       position: absolute;
       bottom: 0;
@@ -213,5 +223,105 @@ nav.nav.active {
           font-size: 14px;
           font-weight: 400;
           text-decoration: line-through; }
+
+.menu .menu-container table {
+  width: 100%; }
+  .menu .menu-container table tr.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*
+    td.hot{
+        &::after {
+            content: url('/images/svg/flame.svg');
+            width: 25px;
+            height: 25px;
+            // background-image: url('/images/svg/flame.svg');
+            position: absolute;
+            bottom: -3px;
+            right: -25px;
+        }
+    }
+    */ }
+    .menu .menu-container table tr.menu-item th {
+      font-size: 24px;
+      font-family: "Baloo 2", cursive;
+      margin-bottom: 8px;
+      position: relative; }
+      .menu .menu-container table tr.menu-item th::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: red;
+        position: absolute;
+        bottom: 0;
+        left: 0; }
+    .menu .menu-container table tr.menu-item th:first-child {
+      margin-left: 17px; }
+    .menu .menu-container table tr.menu-item th:last-child {
+      margin-right: 17px; }
+    .menu .menu-container table tr.menu-item td {
+      font-size: 22px;
+      font-family: "Crete Round", serif;
+      margin-bottom: 8px;
+      position: relative;
+      display: flex;
+      align-items: center; }
+
+.maps .map-text {
+  text-align: center; }
+  .maps .map-text h2 {
+    margin-top: 18px;
+    font-size: 36px;
+    font-family: "Baloo 2", cursive; }
+  .maps .map-text p {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    font-size: 25px;
+    font-family: "Lobster Two", cursive; }
+  .maps .map-text button.outline {
+    margin-top: 22px;
+    border-color: red;
+    color: red; }
+    .maps .map-text button.outline:hover {
+      background: red;
+      color: white; }
+
+.contact form.form {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px; }
+  .contact form.form .form-control {
+    font-size: 17px;
+    font-family: "Crete Round", serif;
+    width: 95%;
+    border-radius: 12px;
+    padding: 10px 8px;
+    margin-bottom: 14px;
+    border: 2px solid #f3f3f3;
+    outline-color: transparent; }
+    .contact form.form .form-control:focus {
+      border: 2px solid red;
+      outline-color: red; }
+  .contact form.form .btn.outline {
+    margin-top: 22px;
+    border-color: red;
+    color: red; }
+    .contact form.form .btn.outline:hover {
+      background: red;
+      color: white; }
+
+.footer {
+  padding: 15px; }
+  .footer p {
+    font-size: 18px;
+    font-family: "Baloo 2", cursive;
+    font-weight: 600;
+    text-align: center; }
+    .footer p span a {
+      text-decoration: none;
+      color: red; }
 
 /*# sourceMappingURL=app.css.map */
