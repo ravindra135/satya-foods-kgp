@@ -4,14 +4,63 @@
   margin: 0;
   padding: 0; }
 
+body {
+  background: #fcfcfc; }
+
 .hidden {
   display: none !important; }
 
 .icons {
   width: 40px; }
 
-body {
-  background: #fafafa; }
+.section {
+  margin: 18px auto;
+  padding: 20px; }
+  .section .section-heading {
+    text-align: center;
+    font-size: 42px;
+    font-family: 'Baloo 2', cursive;
+    margin-bottom: 3rem;
+    position: relative; }
+    .section .section-heading::before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: red;
+      position: absolute;
+      top: 0;
+      left: 60px; }
+    .section .section-heading::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: red;
+      position: absolute;
+      bottom: 0;
+      right: 60px; }
+
+.btn {
+  padding: 15px 25px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer; }
+  .btn:hover {
+    transition: all .43s ease-in-out;
+    border: 2px solid red; }
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid transparent; }
+  .btn.outline:hover {
+    transition: all .43s ease-in-out;
+    background: white; }
 
 header.header {
   padding: 10px;
@@ -45,7 +94,8 @@ header.header {
   left: 0;
   background: black;
   opacity: .25;
-  transition: all 0.75s ease-in-out; }
+  transition: all 0.75s ease-in-out;
+  z-index: 1; }
 
 nav.nav {
   background-color: white;
@@ -55,7 +105,8 @@ nav.nav {
   left: -40%;
   width: 0;
   transition: all 0.75s ease-in-out;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; }
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  z-index: 2; }
   nav.nav .nav-close {
     margin-top: 10px;
     float: right;
@@ -73,5 +124,94 @@ nav.nav.active {
   left: 0;
   width: 62%;
   transition: all 0.45s ease-in-out; }
+
+.hero {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
+
+.hero-text {
+  width: 100%; }
+  .hero-text p {
+    font-size: 60px;
+    font-family: "Crete Round", serif; }
+    .hero-text p strong {
+      font-weight: 400;
+      color: red; }
+  .hero-text h2 {
+    margin-top: 25px;
+    font-size: 24px;
+    font-family: "Baloo 2", cursive;
+    line-height: 1.2; }
+    .hero-text h2 span {
+      color: red; }
+  .hero-text .hero-btn-group {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%; }
+    .hero-text .hero-btn-group .btn-main {
+      background: white; }
+    .hero-text .hero-btn-group .outline {
+      border-color: red;
+      color: red; }
+
+.hero-images {
+  width: 100%;
+  text-align: center; }
+  .hero-images img.hero-img {
+    display: none;
+    width: 100%;
+    max-height: 550px;
+    max-width: 550px;
+    object-fit: contain; }
+  .hero-images img.hero-img.active {
+    display: flex; }
+
+.best-items .items-container {
+  display: flex;
+  width: 100%;
+  gap: 15px; }
+  .best-items .items-container .item {
+    background: blue;
+    padding: 8px;
+    border-radius: 15px;
+    width: 100%;
+    min-height: 240px;
+    background-image: linear-gradient(to bottom right, grey, white);
+    position: relative; }
+    .best-items .items-container .item img {
+      width: 280px;
+      position: absolute;
+      top: -40px;
+      right: -20px; }
+    .best-items .items-container .item .item-info-group {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 15px; }
+      .best-items .items-container .item .item-info-group .item-title {
+        font-size: 32px;
+        font-family: "Crete Round", serif;
+        letter-spacing: .2ch;
+        color: white; }
+      .best-items .items-container .item .item-info-group .item-addon {
+        margin-top: 7px;
+        font-size: 16px;
+        font-family: "Lobster Two", cursive; }
+      .best-items .items-container .item .item-info-group .item-price {
+        margin-top: 15px;
+        font-size: 22px;
+        font-family: "Lobster Two", cursive;
+        font-weight: 900;
+        color: red; }
+        .best-items .items-container .item .item-info-group .item-price .item-marked-price {
+          margin-left: 15px;
+          font-size: 14px;
+          font-weight: 400;
+          text-decoration: line-through; }
 
 /*# sourceMappingURL=app.css.map */

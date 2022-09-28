@@ -3,12 +3,66 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background: #fcfcfc;
+}
 .hidden {
     display: none !important;
 }
 .icons {
     width: 40px;
 }
-body {
-    background: #fafafa;
+.section {
+    margin: 18px auto;
+    padding: 20px;
+    .section-heading {
+        text-align: center;
+        font-size: 42px;
+        font-family: 'Baloo 2', cursive;
+        margin-bottom: 3rem;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: red;
+            position: absolute;
+            top: 0;
+            left: 60px;
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: red;
+            position: absolute;
+            bottom: 0;
+            right: 60px;
+        }
+    }
+}
+.btn {
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    &:hover {
+        transition: all .43s ease-in-out;
+        border: 2px solid red;
+    }
+}
+.btn.outline {
+    background: transparent;
+    border: 2px solid transparent;
+    &:hover {
+        transition: all .43s ease-in-out;
+        background: white;
+    }
 }

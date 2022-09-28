@@ -43,6 +43,7 @@ header.header {
     background: black;
     opacity: .25;
     transition:all 0.75s ease-in-out;
+    z-index: 1;
 }
 nav.nav {
     background-color: white;
@@ -53,6 +54,7 @@ nav.nav {
     width: 0;
     transition:all 0.75s ease-in-out;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    z-index: 2;
     .nav-close {
         margin-top: 10px;
         float: right;
@@ -73,4 +75,116 @@ nav.nav.active {
     left: 0;
     width: 62%;
     transition:all 0.45s ease-in-out;
+}
+
+// Hero Section
+.hero {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-text {
+    width: 100%;
+    p {
+        font-size: 60px;
+        font-family: $ff-crete-round;
+        strong {
+            font-weight: 400;
+            color: red;
+        }
+    }
+    h2 {
+        margin-top: 25px;
+        font-size: 24px;
+        font-family: $ff-baloo;
+        line-height: 1.2;
+        span {
+            color: red;
+        }
+    }
+    .hero-btn-group {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        .btn-main{
+            background: white;
+        }
+        .outline {
+            border-color: red;
+            color: red;
+        }
+    }
+}
+.hero-images {
+    width: 100%;
+    text-align: center;
+    img.hero-img{
+        display: none;
+        width: 100%;
+        max-height: 550px;
+        max-width: 550px;
+        object-fit: contain;
+    }
+    img.hero-img.active{
+        display: flex;
+    }
+}
+
+// Best items
+.best-items{
+    
+    .items-container {
+        display: flex;
+        width: 100%;
+        gap: 15px;
+        .item {
+            background: blue;
+            padding: 8px;
+            border-radius: 15px;
+            width: 100%;
+            min-height: 240px;
+            background-image: linear-gradient(to bottom right, grey, white);
+            position: relative;
+            img {
+                width: 280px;
+                position: absolute;
+                top: -40px;
+                right: -20px;
+            }
+            .item-info-group {
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 15px;
+                .item-title {
+                    font-size: 32px;
+                    font-family: $ff-crete-round;
+                    letter-spacing: .2ch;
+                    color: white;
+                }
+                .item-addon {
+                    margin-top: 7px;
+                    font-size: 16px;
+                    font-family: $ff-lobster-two;
+                }
+                .item-price {
+                    margin-top: 15px;
+                    font-size: 22px;
+                    font-family: $ff-lobster-two;
+                    font-weight: 900;
+                    color: red;
+                    .item-marked-price {
+                        margin-left: 15px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
 }
