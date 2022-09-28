@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Crete+Round&family=Lobster+Two:ital@0;1&display=swap');
+@import 'base';
+
+// Variables;
+$ff-baloo: 'Baloo 2', cursive;
+$ff-crete-round: 'Crete Round', serif;
+$ff-lobster-two: 'Lobster Two', cursive;
+
+// Navbar
+header.header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    img {
+        width: 55px;
+        object-fit: cover;
+    }
+    p.brand-name {
+        font-size: 24px;
+        font-family: $ff-crete-round;
+        span {
+            color: red;
+        }
+    }
+}
+.hamberger img.icons {
+    width: 28px !important;
+    cursor: pointer;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: black;
+    opacity: .25;
+    transition:all 0.75s ease-in-out;
+}
+nav.nav {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -40%;
+    width: 0;
+    transition:all 0.75s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    .nav-close {
+        margin-top: 10px;
+        float: right;
+        margin-right: 10px;
+    }
+    ul {
+        margin-top: 3.7rem;
+        margin-left: 20px;
+        list-style: none;
+        li {
+            font-size: 24px;
+            font-family: $ff-crete-round;
+            margin-top: 10px;
+        }
+    }
+}
+nav.nav.active {
+    left: 0;
+    width: 62%;
+    transition:all 0.45s ease-in-out;
+}
