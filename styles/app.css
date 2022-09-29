@@ -1,428 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Crete+Round&family=Lobster+Two:ital@0;1&display=swap");
-/* Defaults */
-* {
-  margin: 0;
-  padding: 0; }
+/*
+Error: Invalid CSS after "    width: 100%": expected "{", was ";"
+        on line 92 of ./styles/scss/app.scss
 
-body {
-  background: #fcfcfc; }
+87:     gap: 3rem;
+88:     flex-direction: column;
+89:     align-items: center;
+90:     justify-content: space-between;
+91: }
+92:     width: 100%;
+93:     p {
+94:         font-size: 60px;
+95:         font-family: $ff-crete-round;
+96:         strong {
+97:             font-weight: 400;
 
-.hidden {
-  display: none !important; }
-
-.icons {
-  width: 40px; }
-
-.section {
-  margin: 18px auto;
-  padding: 20px; }
-  .section .section-heading {
-    text-align: center;
-    font-size: 42px;
-    font-family: 'Baloo 2', cursive;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    position: relative; }
-    .section .section-heading::before {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: red;
-      position: absolute;
-      top: 0;
-      left: 41%; }
-    .section .section-heading::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: red;
-      position: absolute;
-      bottom: 0;
-      right: 41%; }
-
-@media screen and (min-width: 800px) {
-  .section {
-    padding: 20px 7rem; } }
-@media screen and (min-width: 1355px) {
-  .section {
-    padding: 40px 10rem; } }
-.btn {
-  padding: 15px 25px;
-  border-radius: 25px;
-  border: 2px solid transparent;
-  font-size: 17px;
-  font-weight: 600;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  width: 100%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  cursor: pointer; }
-  .btn:hover {
-    transition: all .43s ease-in-out;
-    border: 2px solid red; }
-
-.btn.outline {
-  background: transparent;
-  border: 2px solid transparent; }
-  .btn.outline:hover {
-    transition: all .43s ease-in-out;
-    background: white; }
-
-@media screen and (min-width: 800px) {
-  .btn {
-    width: 50%;
-    max-width: 320px; } }
-header.header {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.brand {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  gap: 15px; }
-  .brand img {
-    width: 55px;
-    object-fit: cover; }
-  .brand p.brand-name {
-    font-size: 24px;
-    font-family: "Crete Round", serif; }
-    .brand p.brand-name span {
-      color: red; }
-
-.hamberger img.icons {
-  width: 28px !important;
-  cursor: pointer; }
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: black;
-  opacity: .25;
-  transition: all 0.75s ease-in-out;
-  z-index: 1; }
-
-nav.nav {
-  background-color: white;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -40%;
-  width: 0;
-  transition: all 0.75s ease-in-out;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  z-index: 2; }
-  nav.nav .nav-close {
-    margin-top: 10px;
-    float: right;
-    margin-right: 10px; }
-  nav.nav ul {
-    margin-top: 3.7rem;
-    margin-left: 20px;
-    list-style: none; }
-    nav.nav ul li {
-      font-size: 24px;
-      font-family: "Crete Round", serif;
-      margin-top: 10px; }
-      nav.nav ul li a {
-        color: black;
-        text-decoration: none; }
-
-nav.nav.active {
-  left: 0;
-  width: 62%;
-  transition: all 0.45s ease-in-out; }
-
-.hero {
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; }
-
-.hero-text {
-  width: 100%; }
-  .hero-text p {
-    font-size: 60px;
-    font-family: "Crete Round", serif; }
-    .hero-text p strong {
-      font-weight: 400;
-      color: red; }
-  .hero-text h2 {
-    margin-top: 25px;
-    font-size: 24px;
-    font-family: "Baloo 2", cursive;
-    line-height: 1.2; }
-    .hero-text h2 span {
-      color: red; }
-  .hero-text .hero-btn-group {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 100%; }
-    .hero-text .hero-btn-group .btn-main {
-      background: white; }
-    .hero-text .hero-btn-group .outline {
-      border-color: red;
-      color: red; }
-      .hero-text .hero-btn-group .outline:hover {
-        background: red;
-        color: white; }
-
-.hero-images {
-  width: 100%;
-  text-align: center; }
-  .hero-images img.hero-img {
-    display: none;
-    width: 100%;
-    max-height: 550px;
-    object-fit: contain;
-    border-radius: 45px 0 45px 0; }
-  .hero-images img.hero-img.active {
-    display: flex; }
-
-.best-items {
-  background-color: #f2f2f2; }
-  .best-items .items-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 2.7rem; }
-    .best-items .items-container .item {
-      background: blue;
-      padding: 0;
-      border-radius: 15px;
-      width: 100%;
-      min-height: 240px;
-      background-image: linear-gradient(to bottom right, grey, white);
-      position: relative; }
-      .best-items .items-container .item img.item-img {
-        width: 240px;
-        position: absolute;
-        top: -40px;
-        right: 0; }
-      .best-items .items-container .item img.buy-cart {
-        width: 35px;
-        position: absolute;
-        bottom: 18px;
-        right: 18px;
-        fill: red; }
-      .best-items .items-container .item .item-info-group {
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 15px;
-        margin-left: 20px; }
-        .best-items .items-container .item .item-info-group .item-title {
-          font-size: 32px;
-          font-family: "Crete Round", serif;
-          letter-spacing: .2ch;
-          color: white; }
-        .best-items .items-container .item .item-info-group .item-addon {
-          margin-top: 7px;
-          font-size: 16px;
-          font-family: "Lobster Two", cursive; }
-        .best-items .items-container .item .item-info-group .item-price {
-          margin-top: 15px;
-          font-size: 22px;
-          font-family: "Lobster Two", cursive;
-          font-weight: 900;
-          color: red; }
-          .best-items .items-container .item .item-info-group .item-price .item-marked-price {
-            margin-left: 15px;
-            font-size: 14px;
-            font-weight: 400;
-            text-decoration: line-through; }
-
-.menu .menu-container table {
-  width: 100%; }
-  .menu .menu-container table tr.menu-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /*
-    td.hot{
-        &::after {
-            content: url('/images/svg/flame.svg');
-            width: 25px;
-            height: 25px;
-            // background-image: url('/images/svg/flame.svg');
-            position: absolute;
-            bottom: -3px;
-            right: -25px;
-        }
-    }
-    */ }
-    .menu .menu-container table tr.menu-item th {
-      font-size: 24px;
-      font-family: "Baloo 2", cursive;
-      margin-bottom: 8px;
-      position: relative; }
-      .menu .menu-container table tr.menu-item th::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 3px;
-        background: red;
-        position: absolute;
-        bottom: 0;
-        left: 0; }
-    .menu .menu-container table tr.menu-item th:first-child {
-      margin-left: 17px; }
-    .menu .menu-container table tr.menu-item th:last-child {
-      margin-right: 17px; }
-    .menu .menu-container table tr.menu-item td {
-      font-size: 22px;
-      font-family: "Crete Round", serif;
-      margin-bottom: 8px;
-      position: relative;
-      display: flex;
-      align-items: center; }
-
-.maps {
-  background-color: #f2f2f2; }
-  .maps .map {
-    border: 2px solid red;
-    border-radius: 25px;
-    padding: 20px; }
-  .maps .map-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center; }
-    .maps .map-text h2 {
-      margin-top: 18px;
-      font-size: 36px;
-      font-family: "Baloo 2", cursive; }
-    .maps .map-text p {
-      margin-top: 18px;
-      margin-bottom: 18px;
-      font-size: 25px;
-      font-family: "Lobster Two", cursive; }
-    .maps .map-text button.outline {
-      margin-top: 22px;
-      border-color: red;
-      color: red; }
-      .maps .map-text button.outline:hover {
-        background: red;
-        color: white; }
-
-.contact form.form {
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px; }
-  .contact form.form .form-control {
-    font-size: 17px;
-    font-family: "Crete Round", serif;
-    width: 95%;
-    border-radius: 12px;
-    padding: 10px 8px;
-    margin-bottom: 14px;
-    border: 2px solid #f3f3f3;
-    outline-color: transparent; }
-    .contact form.form .form-control:focus {
-      border: 2px solid red;
-      outline-color: red; }
-  .contact form.form .btn.outline {
-    margin-top: 22px;
-    border-color: red;
-    color: red; }
-    .contact form.form .btn.outline:hover {
-      background: red;
-      color: white; }
-
-.footer {
-  background-color: #f2f2f2;
-  padding: 15px; }
-  .footer p {
-    font-size: 18px;
-    font-family: "Baloo 2", cursive;
-    font-weight: 600;
-    text-align: center; }
-    .footer p span a {
-      text-decoration: none;
-      color: red; }
-
-@media screen and (min-width: 800px) {
-  header.header {
-    padding: 10px 4rem !important; }
-
-  .hero-text .hero-btn-group {
-    flex-direction: row;
-    flex: 1;
-    justify-content: space-between; }
-
-  .best-items .items-container {
-    flex-direction: row;
-    width: 100%;
-    flex: 1 0 50%;
-    flex-wrap: wrap;
-    gap: 3.5rem 1.5rem; }
-    .best-items .items-container .item {
-      max-width: 45%; } }
-@media screen and (min-width: 1355px) {
-  header.header {
-    justify-content: unset;
-    align-items: center;
-    padding: 20px 10rem !important; }
-
-  .hamberger img.icons {
-    display: none !important; }
-
-  .overlay {
-    display: none !important; }
-
-  nav.nav {
-    background: transparent;
-    box-shadow: unset;
-    display: flex;
-    position: unset;
-    left: unset;
-    margin-left: auto;
-    width: auto; }
-    nav.nav .nav-close {
-      display: none !important; }
-    nav.nav ul {
-      display: flex;
-      margin-top: unset;
-      margin-left: unset;
-      white-space: pre-wrap; }
-      nav.nav ul li {
-        margin-left: 25px; }
-        nav.nav ul li a {
-          position: relative;
-          text-decoration: underline solid transparent; }
-          nav.nav ul li a:hover {
-            text-decoration: underline solid red;
-            transition: all .35s ease-in-out; }
-
-  .hero {
-    flex-direction: row;
-    gap: 48px; }
-
-  .best-items .items-container {
-    justify-content: space-evenly;
-    margin-top: 4rem; }
-    .best-items .items-container .item {
-      max-width: 350px; }
-
-  .maps .maps-container {
-    display: flex;
-    gap: 5rem;
-    margin-top: 4rem; }
-    .maps .maps-container .map {
-      width: 50%; }
-
-  .contact form.form .form-control {
-    width: 100%; } }
-
-/*# sourceMappingURL=app.css.map */
+Backtrace:
+./styles/scss/app.scss:92
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in `block'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    width: 100%\": expected \"{\", was \";\"\A         on line 92 of ./styles/scss/app.scss\A \A 87:     gap: 3rem;\A 88:     flex-direction: column;\A 89:     align-items: center;\A 90:     justify-content: space-between;\A 91: }\A 92:     width: 100%;\A 93:     p {\A 94:         font-size: 60px;\A 95:         font-family: $ff-crete-round;\A 96:         strong {\A 97:             font-weight: 400;"; }

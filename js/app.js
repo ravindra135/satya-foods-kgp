@@ -25,3 +25,14 @@ window.onload = () => {
   _waEmbed(wa_btnSetting);
 };
   
+// Slider
+// let img_slider = $('.hero-img');
+// for (i = 0; i < img_slider.length; i++) {
+    
+// }
+
+$('#auto').bbslider({
+    auto: true,
+    timer: 2500,
+    loop: true
+});

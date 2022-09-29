@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./styles/app.css">
     <!-- Lottie Script -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Slider -->
+    <link rel="stylesheet" href="./styles/jquery.bbslider.css">
     <title>Satya Foods</title>
 </head>
 <body>
@@ -40,18 +42,21 @@
         <!-- Hero Section -->
         <section class="hero section">
             <div class="hero-text">
-                <p>it's not just <strong>Food</strong>, it's <strong id="typed">...</strong></p>
+                <p>it's not just <strong>Food</strong>,<br> it's <strong id="typed">...</strong></p>
                 <h2>Satya F<span>oo</span>ds<br>- Speaks <span>with</span> Taste</h2>
                 <div class="hero-btn-group">
                     <button class="btn btn-main">Check Menu</button>
                     <button class="btn outline">Order Now</button>
                 </div>
             </div>
-            <div class="hero-images">
-                <img src="./images/hero-1.jpg" alt="chicken" class="hero-img ">
-                <img src="./images/hero-2.jpg" alt="chicken" class="hero-img active">
-                <img src="./images/hero-3.jpg" alt="chicken" class="hero-img ">
-                <img src="./images/hero-4.png" alt="chicken" class="hero-img ">
+            <div id="auto" class="hero-images">
+                <div><img src="./images/hero-1.jpg" alt="chicken" class="hero-img "></div>
+                <div><img src="./images/hero-2.jpg" alt="chicken" class="hero-img "></div>
+                <div><img src="./images/hero-3.jpg" alt="chicken" class="hero-img "></div>
+                <div><img src="./images/hero-4.jpg" alt="chicken" class="hero-img "></div>
+                <div><img src="./images/hero-5.png" alt="chicken" class="hero-img "></div>
+                <div><img src="./images/hero-6.jpg" alt="chicken" class="hero-img "></div>
+                <div><img src="./images/hero-7.jpg" alt="chicken" class="hero-img "></div>
             </div>
         </section>
         <!-- Best Items -->
@@ -66,7 +71,7 @@
                     <div class="item-info-group">
                         <h4 class="item-title">Egg Chilli</h4>
                         <p class="item-addon">with <strong>Extra Chilli</strong></p>
-                        <p class="item-price">₹ 120.00<span class="item-marked-price">₹ 150.00</span></p>
+                        <p class="item-price">₹ 70.00<span class="item-marked-price">₹ 85.00</span></p>
                     </div>
                 </div>
                 <div class="item">
@@ -75,7 +80,7 @@
                     </div>
                     <div class="item-info-group">
                         <h4 class="item-title">Chicken Manchurian</h4>
-                        <p class="item-price">₹ 120.00<span class="item-marked-price">₹ 150.00</span></p>
+                        <p class="item-price">₹ 95.00<span class="item-marked-price">₹ 120.00</span></p>
                     </div>
                 </div>
                 <div class="item">
@@ -104,7 +109,7 @@
                     </div>
                     <div class="item-info-group">
                         <h4 class="item-title">Chicked Suop</h4>
-                        <p class="item-price">₹ 98.00<span class="item-marked-price">₹ 120.00</span></p>
+                        <p class="item-price">₹ 40.00<span class="item-marked-price">₹ 65.00</span></p>
                     </div>
                 </div>
             </div>
@@ -234,6 +239,8 @@
     </main>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- Slider -->
+    <script src="./js/jquery.bbslider.min.js"></script>
     <!-- Typed JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js" integrity="sha512-zKaK6G2LZC5YZTX0vKmD7xOwd1zrEEMal4zlTf5Ved/A1RrnW+qt8pWDfo7oz+xeChECS/P9dv6EDwwPwelFfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Whatsapp Btn -->
