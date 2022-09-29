@@ -68,6 +68,10 @@ nav.nav {
             font-size: 24px;
             font-family: $ff-crete-round;
             margin-top: 10px;
+            a {
+                color: black;
+                text-decoration: none;
+            }
         }
     }
 }
@@ -131,8 +135,8 @@ nav.nav.active {
         display: none;
         width: 100%;
         max-height: 550px;
-        max-width: 550px;
         object-fit: contain;
+        border-radius: 45px 0 45px 0;
     }
     img.hero-img.active{
         display: flex;
@@ -141,6 +145,7 @@ nav.nav.active {
 
 // Best items
 .best-items{
+    background-color: hsl(0, 0%, 95%);
     .items-container {
         display: flex;
         flex-direction: column;
@@ -148,7 +153,7 @@ nav.nav.active {
         gap: 2.7rem;
         .item {
             background: blue;
-            padding: 8px;
+            padding: 0;
             border-radius: 15px;
             width: 100%;
             min-height: 240px;
@@ -171,6 +176,7 @@ nav.nav.active {
                 position: absolute;
                 bottom: 0;
                 margin-bottom: 15px;
+                margin-left: 20px;
                 .item-title {
                     font-size: 32px;
                     font-family: $ff-crete-round;
@@ -259,7 +265,17 @@ nav.nav.active {
 
 // Map
 .maps {
+    background-color: hsl(0, 0%, 95%);
+    .map {
+        border: 2px solid red;
+        border-radius: 25px;
+        padding: 20px;
+    }
     .map-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         h2 {
             margin-top: 18px;
@@ -319,6 +335,7 @@ nav.nav.active {
 
 // Footer
 .footer {
+    background-color: hsl(0, 0%, 95%);
     padding: 15px;
     p {
         font-size: 18px;
@@ -329,6 +346,111 @@ nav.nav.active {
             a {
                 text-decoration: none;
                 color: red;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    header.header {
+        padding: 10px 4rem !important;
+    }
+    .hero-text {
+        .hero-btn-group {
+            flex-direction: row;
+            flex: 1;
+            justify-content: space-between;
+        }
+    }
+    .hero-images {
+        img.hero-img {
+        }
+    }
+
+    .best-items {
+        .items-container {
+            flex-direction: row;
+            width: 100%;
+            flex: 1 0 50%;
+            flex-wrap: wrap;
+            gap: 3.5rem 1.5rem;
+            .item {
+                max-width: 45%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1355px) {
+    header.header {
+        justify-content: unset;
+        align-items: center;
+        padding: 20px 10rem !important;
+    }
+    .hamberger img.icons {
+        display: none !important;
+    }
+    .overlay {
+        display: none !important;
+    }
+    nav.nav {
+        background: transparent;
+        box-shadow: unset;
+        display: flex;
+        // text-align: center;
+        // justify-content: center;
+        position: unset;
+        left: unset;
+        margin-left: auto;
+        width: auto;
+        .nav-close {
+            display: none !important;
+        }
+        ul {
+            display: flex;
+            margin-top: unset;
+            margin-left: unset;
+            white-space: pre-wrap;
+            li {
+                margin-left: 25px;
+                a {
+                    position: relative;
+                    text-decoration: underline solid transparent;
+                    &:hover {
+                       text-decoration: underline solid red;
+                       transition: all .35s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+    .hero {
+        flex-direction: row;
+        gap: 48px;
+    }
+    .best-items {
+        .items-container {
+            justify-content: space-evenly;
+            margin-top: 4rem;
+            .item {
+                max-width: 350px;
+            }
+        }
+    }
+    .maps {
+        .maps-container {
+            display: flex;
+            gap: 5rem;
+            margin-top: 4rem;
+            .map {
+                width: 50%;
+            }
+        }
+    }
+    .contact {
+        form.form {
+            .form-control {
+                width: 100%;
             }
         }
     }

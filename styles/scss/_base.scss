@@ -19,7 +19,8 @@ body {
         text-align: center;
         font-size: 42px;
         font-family: 'Baloo 2', cursive;
-        margin-bottom: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         position: relative;
         &::before {
             content: '';
@@ -43,6 +44,16 @@ body {
         }
     }
 }
+@media screen and (min-width: 800px) {
+    .section {
+        padding: 20px 7rem;
+    }
+}
+@media screen and (min-width: 1355px) {
+    .section {
+        padding: 40px 10rem;
+    }
+}
 .btn {
     padding: 15px 25px;
     border-radius: 25px;
@@ -64,5 +75,12 @@ body {
     &:hover {
         transition: all .43s ease-in-out;
         background: white;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .btn {
+        width: 50%;
+        max-width: 320px;
     }
 }
